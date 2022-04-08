@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BetterJump : MonoBehaviour {
     private Rigidbody2D _rb;
-    [SerializeField] private float fallMultiplier = 2.5f;
-    [SerializeField] private float lowJumpMultiplayer = 2f;
+    [SerializeField] private float fallMultiplier = 10f;
+    [SerializeField] private float lowJumpMultiplayer = 5f;
     
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
