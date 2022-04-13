@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
     private Rigidbody2D _rb;
-    private BoxCollider2D _bc;
+    private CapsuleCollider2D _cc;
     
     [SerializeField] private LayerMask platformsLayerMask;
     [SerializeField] private float speed = 10f;
@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
-        _bc = GetComponent<BoxCollider2D>();
+        _cc = GetComponent<CapsuleCollider2D>();
     }
 
     private void Update() {
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetKey(KeyCode.LeftShift) && IsGrounded()) {
-            dir *= sprintSpeed;
+            dir.x *= sprintSpeed;
         }
         
         Walk(dir);
@@ -39,11 +39,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     private bool IsGrounded() {
-        var bounds = _bc.bounds;
-        var raycast = Physics2D.BoxCast(
+        var bounds = _cc.bounds;
+        var raycast = Physics2D.CapsuleCast(
             bounds.center, 
             bounds.size, 
-            0f, 
+            _cc.direction,
+            0f,
             Vector2.down,
             .1f,
             platformsLayerMask
