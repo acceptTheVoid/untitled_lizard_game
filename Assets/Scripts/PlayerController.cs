@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private LayerMask platformsLayerMask;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float jumpVelocity = 5f;
+    [SerializeField] private float sprintSpeed = 1.5f;
 
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
@@ -18,8 +19,12 @@ public class PlayerController : MonoBehaviour {
         var y = Input.GetAxis("Vertical");
         var dir = new Vector2(x, y);
 
-        if (Input.GetButtonDown("Jump") && IsGrounded()) {
+        if(Input.GetButtonDown("Jump") && IsGrounded()) {
             Jump();
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift) && IsGrounded()) {
+            dir *= sprintSpeed;
         }
         
         Walk(dir);
@@ -43,7 +48,6 @@ public class PlayerController : MonoBehaviour {
             .1f,
             platformsLayerMask
             );
-        Debug.Log(raycast.collider);   
         return raycast.collider != null;
     }
 }
