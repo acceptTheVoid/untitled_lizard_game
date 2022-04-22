@@ -8,8 +8,12 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float jumpVelocity = 5f;
     [SerializeField] private float sprintSpeed = 1.5f;
+    [SerializeField] private float stickForce = 0.5f;
+
+    public bool handsBusy;
 
     private void Start() {
+        handsBusy = true;
         _rb = GetComponent<Rigidbody2D>();
         _cc = GetComponent<CapsuleCollider2D>();
     }
@@ -18,11 +22,11 @@ public class PlayerController : MonoBehaviour {
         var x = Input.GetAxis("Horizontal");
         var dir = new Vector2(x, 0);
 
-        if(Input.GetButtonDown("Jump") && IsGrounded()) {
+        if(Input.GetButtonDown("Jump")) {
             Jump();
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && IsGrounded()) {
+        if (Input.GetKey(KeyCode.LeftShift) && TypeOfGround() != 0) {
             dir.x *= sprintSpeed;
         }
         
@@ -34,10 +38,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Jump() {
-        _rb.velocity += Vector2.up * jumpVelocity;
+        _rb.velocity += Vector2.up * (jumpVelocity * TypeOfGround());
     }
 
-    private bool IsGrounded() {
+    private float TypeOfGround() {
         var bounds = _cc.bounds;
         var raycast = Physics2D.CapsuleCast(
             bounds.center, 
@@ -48,6 +52,10 @@ public class PlayerController : MonoBehaviour {
             .1f,
             platformsLayerMask
             );
-        return raycast.collider != null;
+
+        if (raycast.collider == null) return 0;
+
+        var type = raycast.transform.CompareTag("StickyPlatform");
+        return type ? stickForce : 1;
     }
 }

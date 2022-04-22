@@ -7,6 +7,7 @@ public class LadderMovement : MonoBehaviour {
     private bool _isClimbing;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject Player;
 
     private void Update() {
         _vertical = Input.GetAxis("Vertical");
@@ -26,13 +27,13 @@ public class LadderMovement : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Ladder")) {
+        if (other.CompareTag("Ladder") && !Player.GetComponent<PlayerController>().handsBusy) {
             _isLadder = true;
         }
     }
     
     private void OnTriggerExit2D(Collider2D other) {
-        if (other.CompareTag("Ladder")) {
+        if (other.CompareTag("Ladder") && !Player.GetComponent<PlayerController>().handsBusy) {
             _isLadder = false;
             _isClimbing = false;
         }
