@@ -16,8 +16,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Update() {
         var x = Input.GetAxis("Horizontal");
-        var y = Input.GetAxis("Vertical");
-        var dir = new Vector2(x, y);
+        var dir = new Vector2(x, 0);
 
         if(Input.GetButtonDown("Jump") && IsGrounded()) {
             Jump();
