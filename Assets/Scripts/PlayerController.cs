@@ -10,7 +10,10 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float sprintSpeed = 1.5f;
     [SerializeField] private float stickForce = 0.5f;
 
+    public bool handsBusy;
+
     private void Start() {
+        handsBusy = true;
         _rb = GetComponent<Rigidbody2D>();
         _cc = GetComponent<CapsuleCollider2D>();
     }
