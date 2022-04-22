@@ -9,7 +9,7 @@ public class BetterJump : MonoBehaviour {
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         if (_rb.velocity.y < 0) {
             _rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         } else if (_rb.velocity.y > 0 && !Input.GetButton("Jump")) {
