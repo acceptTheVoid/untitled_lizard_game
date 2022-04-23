@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     private Rigidbody2D _rb;
     private CapsuleCollider2D _cc;
-    
+
+    [SerializeField] private GameObject prompt;
     [SerializeField] private LayerMask platformsLayerMask;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float jumpVelocity = 5f;
@@ -13,7 +14,6 @@ public class PlayerController : MonoBehaviour {
     public bool handsBusy;
 
     private void Start() {
-        handsBusy = true;
         _rb = GetComponent<Rigidbody2D>();
         _cc = GetComponent<CapsuleCollider2D>();
     }
@@ -26,10 +26,12 @@ public class PlayerController : MonoBehaviour {
             Jump();
         }
 
-        if (Input.GetKey(KeyCode.LeftShift) && TypeOfGround() != 0) {
+        if(Input.GetKey(KeyCode.LeftShift) && TypeOfGround() != 0) {
             dir.x *= sprintSpeed;
         }
         
+        if(Input.GetKeyDown(KeyCode.E)) CheckInteraction();
+
         Walk(dir);
     }
 
@@ -53,9 +55,36 @@ public class PlayerController : MonoBehaviour {
             platformsLayerMask
             );
 
-        if (raycast.collider == null) return 0;
+        if(raycast.collider == null) return 0;
 
         var type = raycast.transform.CompareTag("StickyPlatform");
         return type ? stickForce : 1;
+    }
+
+    public void ShowPrompt() {
+        prompt.SetActive(true);
+    }
+
+    public void ClosePrompt() {
+        prompt.SetActive(false);
+    }
+
+    private void CheckInteraction() {
+        var bounds = _cc.bounds;
+        var hits = Physics2D.CapsuleCastAll(
+            bounds.center,
+            bounds.size,
+            _cc.direction,
+            0f,
+            Vector2.zero
+        );
+
+        if(hits.Length != 0) {
+            foreach (var rc in hits) {
+                if (rc.transform.CompareTag("Interactable")) {
+                    rc.transform.GetComponent<Interactable>().Interact();
+                }
+            }
+        }
     }
 }
