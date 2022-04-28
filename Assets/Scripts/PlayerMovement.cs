@@ -1,12 +1,17 @@
 using UnityEngine;
 
-
 public class PlayerMovement : MonoBehaviour {
     public enum Direction {
         Left,
         Right
     }
 
+    private enum GroundType {
+        None,
+        Sticky,
+        Platforms
+    }
+    
     public Direction facing = Direction.Right;
     
     [SerializeField] private float speed = 15;
@@ -37,20 +42,26 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Jump() {
         if(Input.GetButtonDown("Jump")) {
-            _rb.velocity += Vector2.up * (jumpSpeed * GroundType());
+            var ground = GetGroundType();
+            var multiplier = ground switch {
+                GroundType.None => 0,
+                GroundType.Sticky => stickiness,
+                _ => 1
+            };
+            _rb.velocity += Vector2.up * (jumpSpeed * multiplier);
         }
     }
 
     private float Sprint() {
         var resultSpeed = 1f;
-        if(Input.GetKey(KeyCode.LeftShift) && GroundType() != 0) {
+        if(Input.GetKey(KeyCode.LeftShift) && GetGroundType() != GroundType.None) {
             resultSpeed *= sprintSpeed;
         }
         
         return resultSpeed;
     }
 
-    private float GroundType() {
+    private GroundType GetGroundType() {
         var bounds = _cc.bounds;
         var ground = Physics2D.CapsuleCast(
             bounds.center,
@@ -63,11 +74,11 @@ public class PlayerMovement : MonoBehaviour {
         );
 
         // ReSharper disable once Unity.PerformanceCriticalCodeNullComparison
-        if(ground.collider == null) return 0;
+        if(ground.collider == null) return GroundType.None;
 
         var type = ground.transform.CompareTag("StickyPlatform");
         
-        if(type) return stickiness;
-        return 1;
+        if(type) return GroundType.Sticky;
+        return GroundType.Platforms;
     }
 }
