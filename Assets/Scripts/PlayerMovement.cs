@@ -7,12 +7,12 @@ public class PlayerMovement : MonoBehaviour {
         Right
     }
 
-    public Direction facing;
+    public Direction facing = Direction.Right;
     
-    [SerializeField] private float speed;
-    [SerializeField] private float jumpSpeed;
-    [SerializeField] private float sprintSpeed;
-    [SerializeField] private float stickiness;
+    [SerializeField] private float speed = 15;
+    [SerializeField] private float jumpSpeed = 15;
+    [SerializeField] private float sprintSpeed = 1.5f;
+    [SerializeField] private float stickiness = 0.5f;
     [SerializeField] private LayerMask platformLayer;
     
     private Rigidbody2D _rb;
