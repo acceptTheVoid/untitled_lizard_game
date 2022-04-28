@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float sprintSpeed = 1.5f;
     [SerializeField] private float stickiness = 0.5f;
     [SerializeField] private LayerMask platformLayer;
+
+    [SerializeField] private Animator animator;
     
     private Rigidbody2D _rb;
     private CapsuleCollider2D _cc;
@@ -30,6 +32,7 @@ public class PlayerMovement : MonoBehaviour {
     
     private void Update() {
         Walk();
+        FlipSprite();
         Jump();
     }
 
@@ -41,15 +44,15 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Jump() {
-        if(Input.GetButtonDown("Jump")) {
-            var ground = GetGroundType();
-            var multiplier = ground switch {
-                GroundType.None => 0,
-                GroundType.Sticky => stickiness,
-                _ => 1
-            };
-            _rb.velocity += Vector2.up * (jumpSpeed * multiplier);
-        }
+        if(!Input.GetButtonDown("Jump")) return;
+        
+        var ground = GetGroundType();
+        var multiplier = ground switch {
+            GroundType.None => 0,
+            GroundType.Sticky => stickiness,
+            _ => 1
+        };
+        _rb.velocity += Vector2.up * (jumpSpeed * multiplier);
     }
 
     private float Sprint() {
@@ -78,7 +81,14 @@ public class PlayerMovement : MonoBehaviour {
 
         var type = ground.transform.CompareTag("StickyPlatform");
         
-        if(type) return GroundType.Sticky;
-        return GroundType.Platforms;
+        return type ? GroundType.Sticky : GroundType.Platforms;
+    }
+
+    private void FlipSprite() {
+        var oldScale = transform.localScale;
+        if(facing == Direction.Right && oldScale.x < 0
+           || facing == Direction.Left && oldScale.x > 0) {
+            transform.localScale = new Vector3(oldScale.x * -1, oldScale.y);
+        }
     }
 }

@@ -1,12 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Animate : MonoBehaviour {
-    public Animator animator;
+    [SerializeField] private Animator animator;
+    private PlayerMovement _movementScript;
+    private PlayerMovement.Direction _facing;
 
+    private void Start() {
+        _movementScript = GetComponent<PlayerMovement>();
+        _facing = _movementScript.facing;
+    }
+    
     private void Update() {
-        
+        var newFacing = _movementScript.facing;
+        if(_facing != newFacing) {
+            
+        }
     }
 }

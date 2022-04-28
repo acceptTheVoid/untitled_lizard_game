@@ -5,27 +5,40 @@ public class DirectionChangeScript : MonoBehaviour {
     [SerializeField] private GameObject player;
     
     private PlayerMovement _movementScript;
-    private List<(Transform, Vector3)> _playerChildren;
+    private List<Vector3> _childrenTransforms;
+    [SerializeField] private List<Transform> playerChildren;
 
     private void Start() {
         _movementScript = player.GetComponent<PlayerMovement>();
-        _playerChildren = new List<(Transform, Vector3)>();
-        
-        var children = player.transform.childCount;
-        for(var i = 0; i != children; ++i) {
-            var child = player.transform.GetChild(i);
-            var startPos = child.transform.localPosition;
-            _playerChildren.Add((child, startPos));
+        _childrenTransforms = new List<Vector3>();
+
+        foreach(var it in playerChildren) {
+            _childrenTransforms.Add(it.transform.localPosition);
         }
     }
 
     private void Update() {
         var facing = _movementScript.facing;
-        foreach(var i in _playerChildren) {
-            i.Item1.localPosition = i.Item2 * facing switch {
+        for(var i = 0; i != playerChildren.Count; ++i) {
+            var posMultiplier = facing switch {
                 PlayerMovement.Direction.Left => -1,
                 _ => 1
             };
+            var newVec = new Vector3(_childrenTransforms[i].x * posMultiplier, _childrenTransforms[i].y);
+
+            playerChildren[i].localPosition = newVec;
         }
+        
+        /*var objectsAndPositions = playerChildren.Zip(
+            _childrenTransforms, (p, c) => new {playerChildren = p, childrenTransforms = c}
+        );
+
+        var facing = _movementScript.facing;
+        foreach(var it in objectsAndPositions) {
+            it.playerChildren.localPosition = it.childrenTransforms * facing switch {
+                PlayerMovement.Direction.Left => -1,
+                _ => 1
+            };
+        }*/
     }
 }
