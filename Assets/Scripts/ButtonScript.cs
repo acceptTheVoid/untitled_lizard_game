@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class ButtonScript : Interactable {
     public override void Interact() {
-        Debug.Log("Aboba.....");
+        //Debug.Log("Aboba.....");
     }
 }
