@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -9,14 +10,16 @@ public abstract class Interactable : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
-            other.GetComponent<PlayerController>().ShowPrompt();
+        if(other.CompareTag("Player")) {
+            Debug.Log("Player entered");
+            other.GetComponent<InteractionController>().ShowPrompt();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        if (other.CompareTag("Player")) {
-            other.GetComponent<PlayerController>().ClosePrompt();
+        if(other.CompareTag("Player")) {
+            Debug.Log("Player exited");
+            other.GetComponent<InteractionController>().ClosePrompt();
         }
     }
 }

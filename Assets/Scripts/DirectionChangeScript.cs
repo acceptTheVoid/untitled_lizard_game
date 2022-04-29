@@ -25,20 +25,8 @@ public class DirectionChangeScript : MonoBehaviour {
                 _ => 1
             };
             var newVec = new Vector3(_childrenTransforms[i].x * posMultiplier, _childrenTransforms[i].y);
-
+            
             playerChildren[i].localPosition = newVec;
         }
-        
-        /*var objectsAndPositions = playerChildren.Zip(
-            _childrenTransforms, (p, c) => new {playerChildren = p, childrenTransforms = c}
-        );
-
-        var facing = _movementScript.facing;
-        foreach(var it in objectsAndPositions) {
-            it.playerChildren.localPosition = it.childrenTransforms * facing switch {
-                PlayerMovement.Direction.Left => -1,
-                _ => 1
-            };
-        }*/
     }
 }
