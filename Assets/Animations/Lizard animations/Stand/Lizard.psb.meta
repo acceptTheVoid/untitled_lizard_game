@@ -12844,207 +12844,6 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 796, y: 3470}
-  platformSettings: []
-  mosaicLayers: 1
-  documentPivot: {x: 0, y: 0}
-  documentAlignment: 7
-  importHiddenLayers: 0
-  importedTextureWidth: 1024
-  importedTextureHeight: 2048
-  documentSize: {x: 3616, y: 3495}
-  paperDollMode: 0
-  keepDupilcateSpriteName: 0
-  spriteCategoryList:
-    categories: []
-  textureActualWidth: 4096
-  textureActualHeight: 8192
-  spritePackingTag: 
-  resliceFromLayer: 0
-  characterMode: 1
-  mosaicPSDLayers: []
-  rigPSDLayers:
-  - name: Eye
-    spriteName: Eye
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 6ec50d9197e33d94c9f512e7f116dd1e
-    layerID: 50
-    mosaicPosition: {x: 1518, y: 6531}
-  - name: Head
-    spriteName: Head
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 8952b1b2a735a7b498a2ce4931d1c62b
-    layerID: 48
-    mosaicPosition: {x: 796, y: 2757}
-  - name: Right arm
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: 00000000000000000000000000000000
-    layerID: 29
-    mosaicPosition: {x: 0, y: 0}
-  - name: Right arm top Mask
-    spriteName: Right arm top Mask
-    isGroup: 0
-    parentIndex: 2
-    spriteID: 9bd0dbe309f8765469f14b31c45155ec
-    layerID: 28
-    mosaicPosition: {x: 1518, y: 4793}
-  - name: Right arm mid
-    spriteName: Right arm mid
-    isGroup: 0
-    parentIndex: 2
-    spriteID: 7652ce83dfb66fc4b854794d0d8be183
-    layerID: 27
-    mosaicPosition: {x: 2094, y: 2757}
-  - name: Right arm top
-    spriteName: Right arm top
-    isGroup: 0
-    parentIndex: 2
-    spriteID: 7c5cafbf9da74fc48bf7b4945a196538
-    layerID: 26
-    mosaicPosition: {x: 796, y: 5936}
-  - name: Left arm bot
-    spriteName: Left arm bot
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 168fa85a79b247241bc7b4bac0ce5d78
-    layerID: 25
-    mosaicPosition: {x: 2522, y: 3425}
-  - name: Scepter
-    spriteName: Scepter
-    isGroup: 0
-    parentIndex: -1
-    spriteID: b280240e5a2904543a8baba67ea2f905
-    layerID: 24
-    mosaicPosition: {x: 4, y: 4}
-  - name: Tummy
-    spriteName: Tummy
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 216b14f411c2fce47b47c35f0d1d6a76
-    layerID: 23
-    mosaicPosition: {x: 4, y: 2757}
-  - name: Left arm
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: 00000000000000000000000000000000
-    layerID: 20
-    mosaicPosition: {x: 0, y: 0}
-  - name: Left arm top Mask
-    spriteName: Left arm top Mask
-    isGroup: 0
-    parentIndex: 9
-    spriteID: 996211b5199c36a4da6a245c9569d5ac
-    layerID: 19
-    mosaicPosition: {x: 1518, y: 5985}
-  - name: Left arm mid
-    spriteName: Left arm mid
-    isGroup: 0
-    parentIndex: 9
-    spriteID: baf54d1f3748d2e4e898e5bca9015673
-    layerID: 18
-    mosaicPosition: {x: 796, y: 4793}
-  - name: Left arm top
-    spriteName: Left arm top
-    isGroup: 0
-    parentIndex: 9
-    spriteID: c5117f4de35769447aa445529095f1d9
-    layerID: 17
-    mosaicPosition: {x: 1518, y: 5417}
-  - name: Left leg
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: 00000000000000000000000000000000
-    layerID: 15
-    mosaicPosition: {x: 0, y: 0}
-  - name: Left leg mid Mask
-    spriteName: Left leg mid Mask
-    isGroup: 0
-    parentIndex: 13
-    spriteID: 704fd6da92a4bf444b8739bd833ae367
-    layerID: 14
-    mosaicPosition: {x: 1518, y: 7699}
-  - name: Left leg bot
-    spriteName: Left leg bot
-    isGroup: 0
-    parentIndex: 13
-    spriteID: 0733bfbbd64fcea4f9114e94252670c3
-    layerID: 13
-    mosaicPosition: {x: 2094, y: 3425}
-  - name: Left leg top Mask
-    spriteName: Left leg top Mask
-    isGroup: 0
-    parentIndex: 13
-    spriteID: 0a0a01d6d4e4028449c96f4ba671748e
-    layerID: 12
-    mosaicPosition: {x: 796, y: 6587}
-  - name: Left leg mid
-    spriteName: Left leg mid
-    isGroup: 0
-    parentIndex: 13
-    spriteID: 9b4575e80745f7e43b7c03552c7fcd51
-    layerID: 11
-    mosaicPosition: {x: 1193, y: 5222}
-  - name: Left leg top
-    spriteName: Left leg top
-    isGroup: 0
-    parentIndex: 13
-    spriteID: 3e8a2cf529f45dc40ab5d797d5a6587a
-    layerID: 10
-    mosaicPosition: {x: 796, y: 5222}
-  - name: Right leg
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: 00000000000000000000000000000000
-    layerID: 8
-    mosaicPosition: {x: 0, y: 0}
-  - name: Right leg mid Mask
-    spriteName: Right leg mid Mask
-    isGroup: 0
-    parentIndex: 19
-    spriteID: 5ea025aa5c2c87c48b60ad5eeba824e8
-    layerID: 7
-    mosaicPosition: {x: 1763, y: 7699}
-  - name: Right leg bot
-    spriteName: Right leg bot
-    isGroup: 0
-    parentIndex: 19
-    spriteID: 68ed54830c94c41439c301d9260b9489
-    layerID: 6
-    mosaicPosition: {x: 1518, y: 7407}
-  - name: Right leg top Mask
-    spriteName: Right leg top Mask
-    isGroup: 0
-    parentIndex: 19
-    spriteID: c5ad36a5ebf66a04b92ed1685046cf39
-    layerID: 5
-    mosaicPosition: {x: 1197, y: 5936}
-  - name: Right leg mid
-    spriteName: Right leg mid
-    isGroup: 0
-    parentIndex: 19
-    spriteID: ff961e9ddb6286d459d5f4a59b2482c9
-    layerID: 4
-    mosaicPosition: {x: 1518, y: 6915}
-  - name: Right leg top
-    spriteName: Right leg top
-    isGroup: 0
-    parentIndex: 19
-    spriteID: 64055f9176951184787756dbacf66dac
-    layerID: 3
-    mosaicPosition: {x: 796, y: 7276}
-  - name: Tail
-    spriteName: Tail
-    isGroup: 0
-    parentIndex: -1
-    spriteID: bd57969559364e243a162d0ae1a5d6c9
-    layerID: 2
-    mosaicPosition: {x: 796, y: 3760}
   characterData:
     bones:
     - name: Bone_body bot
@@ -13392,8 +13191,296 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Eye
+    spriteName: Eye
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6ec50d9197e33d94c9f512e7f116dd1e
+    layerID: 50
+    mosaicPosition: {x: 1518, y: 6531}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Head
+    spriteName: Head
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8952b1b2a735a7b498a2ce4931d1c62b
+    layerID: 48
+    mosaicPosition: {x: 796, y: 2757}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right arm
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 92d411ab27d3e3347849691655f7caa6
+    layerID: 29
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Right arm top Mask
+    spriteName: Right arm top Mask
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 9bd0dbe309f8765469f14b31c45155ec
+    layerID: 28
+    mosaicPosition: {x: 1518, y: 4793}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right arm mid
+    spriteName: Right arm mid
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 7652ce83dfb66fc4b854794d0d8be183
+    layerID: 27
+    mosaicPosition: {x: 2094, y: 2757}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right arm top
+    spriteName: Right arm top
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 7c5cafbf9da74fc48bf7b4945a196538
+    layerID: 26
+    mosaicPosition: {x: 796, y: 5936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left arm bot
+    spriteName: Left arm bot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 168fa85a79b247241bc7b4bac0ce5d78
+    layerID: 25
+    mosaicPosition: {x: 2522, y: 3425}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Scepter
+    spriteName: Scepter
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b280240e5a2904543a8baba67ea2f905
+    layerID: 24
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tummy
+    spriteName: Tummy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 216b14f411c2fce47b47c35f0d1d6a76
+    layerID: 23
+    mosaicPosition: {x: 4, y: 2757}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left arm
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 1908995ec245a6f4784ae2e992815696
+    layerID: 20
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Left arm top Mask
+    spriteName: Left arm top Mask
+    isGroup: 0
+    parentIndex: 9
+    spriteID: 996211b5199c36a4da6a245c9569d5ac
+    layerID: 19
+    mosaicPosition: {x: 1518, y: 5985}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left arm mid
+    spriteName: Left arm mid
+    isGroup: 0
+    parentIndex: 9
+    spriteID: baf54d1f3748d2e4e898e5bca9015673
+    layerID: 18
+    mosaicPosition: {x: 796, y: 4793}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left arm top
+    spriteName: Left arm top
+    isGroup: 0
+    parentIndex: 9
+    spriteID: c5117f4de35769447aa445529095f1d9
+    layerID: 17
+    mosaicPosition: {x: 1518, y: 5417}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left leg
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 99f24abbb685cac4bac0ce42782114ff
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Left leg mid Mask
+    spriteName: Left leg mid Mask
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 704fd6da92a4bf444b8739bd833ae367
+    layerID: 14
+    mosaicPosition: {x: 1518, y: 7699}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left leg bot
+    spriteName: Left leg bot
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 0733bfbbd64fcea4f9114e94252670c3
+    layerID: 13
+    mosaicPosition: {x: 2094, y: 3425}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left leg top Mask
+    spriteName: Left leg top Mask
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 0a0a01d6d4e4028449c96f4ba671748e
+    layerID: 12
+    mosaicPosition: {x: 796, y: 6587}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left leg mid
+    spriteName: Left leg mid
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 9b4575e80745f7e43b7c03552c7fcd51
+    layerID: 11
+    mosaicPosition: {x: 1193, y: 5222}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Left leg top
+    spriteName: Left leg top
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 3e8a2cf529f45dc40ab5d797d5a6587a
+    layerID: 10
+    mosaicPosition: {x: 796, y: 5222}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right leg
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 98f4858561f8d464da9c1a110c39dc48
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Right leg mid Mask
+    spriteName: Right leg mid Mask
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 5ea025aa5c2c87c48b60ad5eeba824e8
+    layerID: 7
+    mosaicPosition: {x: 1763, y: 7699}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right leg bot
+    spriteName: Right leg bot
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 68ed54830c94c41439c301d9260b9489
+    layerID: 6
+    mosaicPosition: {x: 1518, y: 7407}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right leg top Mask
+    spriteName: Right leg top Mask
+    isGroup: 0
+    parentIndex: 19
+    spriteID: c5ad36a5ebf66a04b92ed1685046cf39
+    layerID: 5
+    mosaicPosition: {x: 1197, y: 5936}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right leg mid
+    spriteName: Right leg mid
+    isGroup: 0
+    parentIndex: 19
+    spriteID: ff961e9ddb6286d459d5f4a59b2482c9
+    layerID: 4
+    mosaicPosition: {x: 1518, y: 6915}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right leg top
+    spriteName: Right leg top
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 64055f9176951184787756dbacf66dac
+    layerID: 3
+    mosaicPosition: {x: 796, y: 7276}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tail
+    spriteName: Tail
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bd57969559364e243a162d0ae1a5d6c9
+    layerID: 2
+    mosaicPosition: {x: 796, y: 3760}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
   generateGOHierarchy: 0
   textureAssetName: Lizard Texture
   prefabAssetName: Lizard Prefab
   spriteLibAssetName: Lizard Sprite Lib
+  skeletonAssetName: 
   secondarySpriteTextures: []
