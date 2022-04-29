@@ -27,14 +27,14 @@ public class LadderMovement : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        var handsBusy = Player.GetComponent<PlayerController>().handsBusy;
+        var handsBusy = Player.GetComponent<ItemController>().isEquipped;
         if (other.CompareTag("Ladder") && !handsBusy || other.CompareTag("Vine") && handsBusy) {
             _isLadder = true;
         }
     }
     
     private void OnTriggerExit2D(Collider2D other) {
-        if (other.CompareTag("Ladder") || other.CompareTag("Vine")) {
+        if(other.CompareTag("Ladder") || other.CompareTag("Vine")) {
             _isLadder = false;
             _isClimbing = false;
         }
