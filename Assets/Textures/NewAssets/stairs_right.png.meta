@@ -45,6 +45,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -280,6 +281,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      stairs_right_1: 643454953638467490
+      stairs_right_6: 1619919949475157989
+      stairs_right_0: 3095821490990254212
+      stairs_right_2: 224922007522881301
+      stairs_right_5: -4764988816766436676
+      stairs_right_4: 1088866479989471977
+      stairs_right_3: -5536595670671644772
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

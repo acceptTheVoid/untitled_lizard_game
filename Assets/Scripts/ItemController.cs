@@ -4,6 +4,7 @@ using UnityEngine;
 public class ItemController : MonoBehaviour {
     public bool isEquipped;
     public GameObject item;
+    [SerializeField] private Animator _animator;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private GameObject ебучийПосохВРуках;
 
@@ -34,6 +35,7 @@ public class ItemController : MonoBehaviour {
         
         item = itemToEquip;
         isEquipped = true;
+        _animator.SetBool("isEquipped", true);
         item.transform.SetParent(ебучийПосохВРуках.transform);
         item.SetActive(false);
         ебучийПосохВРуках.SetActive(true);
@@ -52,6 +54,7 @@ public class ItemController : MonoBehaviour {
         item.SetActive(true);
         ебучийПосохВРуках.SetActive(false);
         isEquipped = false;
+        _animator.SetBool("isEquipped", false);
         item = null;
     }
 }

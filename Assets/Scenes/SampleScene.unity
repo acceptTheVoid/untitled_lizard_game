@@ -848,6 +848,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6423043567117660208, guid: 5d05e6713fe641047b051973bf32f6e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 3694019535390075217, guid: 5d05e6713fe641047b051973bf32f6e3, type: 3}
       propertyPath: m_Name
       value: Lizard_move_scepter
@@ -864,6 +868,30 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -1109918696822886024, guid: 5d05e6713fe641047b051973bf32f6e3, type: 3}
   m_PrefabInstance: {fileID: 487748373}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &805046318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3694019535390075217, guid: 5d05e6713fe641047b051973bf32f6e3, type: 3}
+  m_PrefabInstance: {fileID: 487748373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &805046319
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805046318}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ecabf5876cb0eb458a34cb02856ea53, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &868659118
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,12 +1012,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868659118}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bffa573da7d7b604d973f903017c1af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 805046319}
 --- !u!114 &868659125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,6 +1032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEquipped: 0
   item: {fileID: 0}
+  _animator: {fileID: 805046319}
   playerMovement: {fileID: 868659120}
   "\u0435\u0431\u0443\u0447\u0438\u0439\u041F\u043E\u0441\u043E\u0445\u0412\u0420\u0443\u043A\u0430\u0445": {fileID: 731026408}
 --- !u!114 &868659126
