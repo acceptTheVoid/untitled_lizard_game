@@ -1,9 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonScript : Interactable {
+    [SerializeField] private GameObject vine;
+
+    private void Start() {
+        vine.SetActive(false);
+        interactionEnabled = true;
+    }
+    
     public override void Interact() {
-        //Debug.Log("Aboba.....");
+        if(!interactionEnabled) return;
+        
+        vine.SetActive(true);
+        interactionEnabled = false;
     }
 }

@@ -3,6 +3,8 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public abstract class Interactable : MonoBehaviour {
+    public bool interactionEnabled;
+    
     public abstract void Interact();
 
     private void Reset() {
@@ -10,7 +12,7 @@ public abstract class Interactable : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")) {
+        if(other.CompareTag("Player") && interactionEnabled) {
             Debug.Log("Player entered");
             other.GetComponent<InteractionController>().ShowPrompt();
         }
